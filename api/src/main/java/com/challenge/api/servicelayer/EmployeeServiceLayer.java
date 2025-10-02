@@ -27,6 +27,9 @@ public class EmployeeServiceLayer {
     public EmployeeServiceLayer() {
         // mock data
         CreateFakeEmployee("Diego", "Alvarez", 90000, 21, "SWE", "diego.alvarez.dejesus@gmail.com");
+        CreateFakeEmployee("John", "Smith", 160000, 39, "Managing Director", "John.Smith@gmail.com");
+        CreateFakeEmployee("Kelly", "Ann", 200000, 52, "CEO", "Kelly.Ann@gmail.com");
+
     }
 
     public void CreateFakeEmployee(String firstName, String lastName, Integer salary, Integer age, String jobTitle, String email) {
