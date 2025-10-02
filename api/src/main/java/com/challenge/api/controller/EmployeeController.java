@@ -4,6 +4,7 @@ import com.challenge.api.model.Employee;
 import java.util.List;
 import java.util.UUID;
 
+import com.challenge.api.model.EmployeeImplement;
 import com.challenge.api.servicelayer.EmployeeServiceLayer;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -51,12 +52,12 @@ public class EmployeeController {
      * @return Newly created Employee
      */
     @PostMapping()
-    public Employee createEmployee(@RequestBody Object requestBody) {
+    public Employee createEmployee(@RequestBody EmployeeImplement requestBody) {
         if (requestBody == null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Request body is null");
         }
         try {
-            return employeeServiceLayer.createEmployee((Employee) requestBody);
+            return employeeServiceLayer.createEmployee(requestBody);
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
