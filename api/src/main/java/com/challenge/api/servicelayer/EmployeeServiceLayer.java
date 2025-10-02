@@ -48,8 +48,8 @@ public class EmployeeServiceLayer {
     }
 
     // use Optional<Employee> in case Employee does not exist
-    public Optional<Employee> getEmployeeByUuid(UUID uuid) {
-        return Optional.ofNullable(employees.get(uuid));
+    public Employee getEmployeeByUuid(UUID uuid) {
+        return employees.get(uuid);
     }
 
     public Employee createEmployee(Employee employee) {
