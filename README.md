@@ -1,3 +1,31 @@
+# How I Tested
+
+### Get All Employees
+curl http://localhost:8080/api/v1/employee
+
+### Get Employee by UUID
+curl http://localhost:8080/api/v1/employee/{paste-existing-uuid-here}
+
+### Create Employees (Success)
+curl -X POST http://localhost:8080/api/v1/employee \
+-H "Content-Type: application/json" \
+-d '{
+"firstName": "Alice",
+"lastName": "Williams",
+"email": "alice.williams@company.com",
+"jobTitle": "Data Scientist",
+"salary": 90000,
+"age": 28
+}'
+
+### Create Employees (Error)
+curl -X POST http://localhost:8080/api/v1/employee \
+-H "Content-Type: application/json" \
+-d '{
+"firstName": "Bob",
+"lastName": "Smith"
+}'
+
 # ReliaQuest's Entry-Level Java Challenge
 
 Please keep the following in mind while working on this challenge:
