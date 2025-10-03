@@ -69,9 +69,13 @@ public class EmployeeServiceLayer {
         }
         if (employee.getSalary() == null) {
             throw new IllegalArgumentException("Salary cannot be null");
+        } else {
+            employee.getSalary();
         }
         if (employee.getAge() == null) {
             throw new IllegalArgumentException("Age cannot be null");
+        } else {
+             employee.getAge();
         }
         if (employee.getJobTitle() == null || employee.getJobTitle().isEmpty()) {
             throw new IllegalArgumentException("Job title cannot be null");
