@@ -57,11 +57,15 @@ public class EmployeeServiceLayer {
 
     public Employee createEmployee(Employee employee) {
         // Check variables are filled: firstName, lastName, salary, age, jobTitle, email
-        if (employee.getFirstName() == null) {
+        if (employee.getFirstName() == null || employee.getFirstName() == null) {
             throw new IllegalArgumentException("First name cannot be null");
+        } else {
+            employee.getFirstName();
         }
-        if (employee.getLastName() == null) {
+        if (employee.getLastName() == null || employee.getLastName().isEmpty()) {
             throw new IllegalArgumentException("Last name cannot be null");
+        } else {
+            employee.getLastName();
         }
         if (employee.getSalary() == null) {
             throw new IllegalArgumentException("Salary cannot be null");
@@ -69,11 +73,15 @@ public class EmployeeServiceLayer {
         if (employee.getAge() == null) {
             throw new IllegalArgumentException("Age cannot be null");
         }
-        if (employee.getJobTitle() == null) {
+        if (employee.getJobTitle() == null || employee.getJobTitle().isEmpty()) {
             throw new IllegalArgumentException("Job title cannot be null");
+        } else {
+            employee.getJobTitle();
         }
-        if (employee.getEmail() == null) {
+        if (employee.getEmail() == null || employee.getEmail().isEmpty()) {
             throw new IllegalArgumentException("Email cannot be null");
+        } else {
+            employee.getEmail();
         }
 
         // Populate other variables
